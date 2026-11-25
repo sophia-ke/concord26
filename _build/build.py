@@ -165,7 +165,7 @@ def build(L):
 <div class="menu" role="dialog" aria-label="{t('菜单', 'Menu')}">
   <div class="wrap top"><a class="logo" href="index.html"><img class="lg-w" src="{P}assets/logo-white.png" alt="{logo_alt}" width="163" height="36"></a><button class="close" data-menu aria-label="{t('关闭菜单', 'Close menu')}"></button></div>
   <div class="wrap" style="display:flex;flex-direction:column;flex:1"><ol>{mnav}</ol>
-  <div class="foot mono"><span>+86 21-52353552</span><a href="mailto:marketing@concordmed.cn">marketing@concordmed.cn</a><span class="mlang"><a href="{zh_href}" data-setlang="zh"{CUR if zh else ''}>中文</a> / <a href="{en_href}" data-setlang="en"{'' if zh else CUR}>English</a></span></div></div>
+  </div>
 </div>
 <main>
 {body}
