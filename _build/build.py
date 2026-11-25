@@ -71,6 +71,9 @@ GLOBE = ('<svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10
          '<path d="M2.5 10h15M10 2.5c2.2 2.1 3.3 4.6 3.3 7.5s-1.1 5.4-3.3 7.5c-2.2-2.1-3.3-4.6-3.3-7.5S7.8 4.6 10 2.5Z" stroke="currentColor" stroke-width="1.3"/></svg>')
 CUR = ' aria-current="page"'
 HERO_IMG = 'upfiles/20210126073818578.jpg'
+# cache-busting version: changes whenever the stylesheet or script changes
+import hashlib
+VER = hashlib.md5(b''.join(open(os.path.join(ROOT, 'assets', f), 'rb').read() for f in ('c26.css', 'c26.js'))).hexdigest()[:8]
 
 # ---------- auto language detection (runs in <head>, before paint) ----------
 # Order: explicit choice (switcher or ?lang=) > cached auto result > browser language > IP country.
@@ -149,7 +152,7 @@ def build(L):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500&family=Manrope:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{P}assets/c26.css">
+<link rel="stylesheet" href="{P}assets/c26.css?v={VER}">
 </head>
 <body>
 <header class="hdr{' is-over' if over else ' is-solid'}">
@@ -184,7 +187,7 @@ def build(L):
     <div class="base mono"><span>© 2002–2026 {t('上海康迎医疗器械有限公司', 'Shanghai Concord Medical Equipment Co., Ltd.')}</span><span><a href="https://beian.miit.gov.cn" target="_blank" rel="noopener noreferrer">沪ICP备12029303号-1</a> · <a href="{alt}" data-setlang="{t('en', 'zh')}">{t('English', '中文')}</a></span></div>
   </div>
 </footer>
-<script src="{P}assets/c26.js"></script>
+<script src="{P}assets/c26.js?v={VER}"></script>
 </body>
 </html>
 '''
