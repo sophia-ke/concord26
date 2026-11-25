@@ -263,7 +263,7 @@ def build(L):
                        'Since 2002, Concord Medical has focused on digital, intelligent operating room systems — delivering complete integrated ORs and remote-surgery cloud platforms for hospitals across China.')}</p>
     <div class="actions"><a class="btn btn-light" href="contact.html">{t('联系我们', 'Contact us')} {ARROW}</a><a class="link" href="#products">{t('浏览产品线', 'Explore products')} {DOWN}</a></div>
   </div>
-  <div class="hero-bar mono"><div class="wrap"><span class="left">{t('Digital Integrated Operating Room · 数字化智慧手术室', 'Digital Integrated Operating Room · Since 2002')}</span><span class="scroll">{t('向下滚动', 'Scroll')} <i></i></span></div></div>
+  <div class="hero-bar mono"><div class="wrap"><span class="left">{t('Digital Integrated Operating Room · 数字化智慧手术室', 'Digital Integrated Operating Room · Since 2002')}</span></div></div>
 </section>
 
 <section class="sec" id="about"><div class="wrap">
