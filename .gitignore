@@ -1,0 +1,10 @@
+# leftovers from the original crawled site (not used by the redesign)
+/css/
+/js/
+/images/
+# local backups of old pages
+/_build/old_en_backup/
+/_build/old_pages_backup/
+/_build/__pycache__/
+/_build/data_en.json
+.DS_Store
