@@ -232,6 +232,8 @@ def build(L):
       <li><b>{t('广州', 'Guangzhou')}</b><span class="mono">03 · {t('办事机构', 'Office')}</span></li></ul>'''
 
     def write(fname, content):
+        if zh:  # Chinese style: no full stop at the end of a text block (inner sentences keep theirs)
+            content = re.sub(r'。(?=(?:\s*</[A-Za-z0-9]+>)+)', '', content)
         with open(os.path.join(OUT, fname), 'w', encoding='utf-8') as f: f.write(content)
 
     # ---------- home ----------
